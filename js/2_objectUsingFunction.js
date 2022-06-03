@@ -157,7 +157,7 @@ console.log("Hello Objects function.");
 
 
 // ================================step 5 new keyword ================================
-function createUser(fName,lName,age,city,zipCode,dist,addr){
+function CreateUser(fName,lName,age,city,zipCode,dist,addr){
     const address = {};
     this.address = address;
     this.fName = fName;
@@ -170,23 +170,23 @@ function createUser(fName,lName,age,city,zipCode,dist,addr){
 }
 
 
-createUser.prototype.fullName = function(){
+CreateUser.prototype.fullName = function(){
     return this.fName + " " + this.lName;
 }
-createUser.prototype.shortInfo = function(){
+CreateUser.prototype.shortInfo = function(){
     return `This is ${this.fullName()} who is ${this.age} years old from ${this.address.city}.`;
 }
-createUser.prototype.addressInfo = function(){
+CreateUser.prototype.addressInfo = function(){
     return `${this.address.addr} \nZip Code : ${this.address.zipCode} \nDistrict : ${this.address.dist} \nCity : ${this.address.city}`;
 }
 
 
 
-const user1 = new createUser('Bikash',"Chowdhury",25,'Dhaka','1553','Munshiganj','charigaon');
-const user2 = new createUser('Kazi',"Jahin",25,'Faridpur','1553','Somewhere','Somevillage');
+const user1 = new CreateUser('Bikash',"Chowdhury",25,'Dhaka','1553','Munshiganj','charigaon');
+const user2 = new CreateUser('Kazi',"Jahin",25,'Faridpur','1553','Somewhere','Somevillage');
 
 
-console.log(createUser.prototype);
+console.log(CreateUser.prototype);
 
 console.log(user2);
 console.log(user2.fullName());
